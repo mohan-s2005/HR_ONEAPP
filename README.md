@@ -1,39 +1,30 @@
-Your clean, user-friendly `README.md` file is ready! It includes all the structural layouts, step-by-step setup guides, architecture descriptions, and default credentials formatted exactly like your previous projects to guarantee a professional submission.
+# 🎓 HR Oneapp System
 
-[file-tag: code-generated-file-0-1781518342557358546]
+A full-stack human resource management and operational portal web application built with **Python Flask**, **SQLAlchemy (SQLite)**, and clean **HTML5/CSS3** utilizing Jinja2 template inheritance and real-time WebSockets.
 
-### 📝 README File Content
+## 🚀 Key Features Built
 
-Here is the exact layout that has been generated and saved inside your project folder for reference:
+* **Secure Password Hashing:** Leverages `werkzeug.security` (PBKDF2 SHA256) to ensure credentials are never stored as plain text.
+* **Session Protection:** Prevents unauthorized URL access via structural backend blueprint route verification.
+* **Dynamic Flash Alerts:** Utilizes Flask's native message flashing engine to handle real-time form validation and authentication feedback.
+* **Role-Based Routing:** Differentiates administrative and employee dashboard panels seamlessly based on user access levels.
+* **Live Dynamic Interactions:** Implements `Flask-SocketIO` to manage real-time global messaging channels and simulated interactive video feeds instantly.
 
-```markdown
-# HR Oneapp Matrix - Complete Workspace Operational Console
+## 🛠️ Tech Stack Used
 
-A comprehensive full-stack Human Resource management platform and live communication portal built using **Python Flask**, **SQLAlchemy ORM**, and **Socket.IO WebSockets**. The application features an organized Blueprint-driven architecture, interactive admin/employee modules, global live chat channels, and a real-time WebRTC-simulated conference room control console.
+* **Backend:** Python 3, Flask
+* **Database:** SQLAlchemy, SQLite3
+* **Real-time Engine:** Flask-SocketIO (WebSockets)
+* **Frontend:** Jinja2 Templates, HTML5, Custom CSS, JavaScript (DOM Manipulation)
 
----
+## 🔑 Login Credentials
 
-## 🛠️ Project Architecture & Layout
+* **Admin Email:** `admin@company.org`
+* **Admin Password:** `admin123`
+* **Default OTP:** `000000`
 
-The project follows a modular, clean, scalable directory structure to segregate database management from presentation and routing engines:
+## 💻 How to Run Locally
 
-```text
-HR_Oneapp/
-│
-├── app.py                  # Main Server Configuration & WebSocket Hooks
-├── models.py               # SQLAlchemy Database Schemas (User, Announcement, ChatMessage)
-├── .gitignore              # Source control rules (prevents tracking db, caches, venv)
-├── requirements.txt        # Python package dependencies manifest
-│
-├── routes/                 # Modular Blueprint Package Folder
-│   ├── __init__.py         # Blank initialization file marking it as a package
-│   ├── auth.py             # Login, Sign-Out, Forgot/Reset Password handlers
-│   ├── admin.py            # Administrative workspace modifiers (user management)
-│   └── user.py             # User profile pathways
-│
-└── templates/              # Jinja2 Layout View Component Templates
-    ├── base.html           # Master boilerplate template with global Navbar & flash alert hooks
-    ├── login.html          # Secure landing sign-in card layout
-    ├── forgot_password.html# Token-generation validation request layout
-    ├── reset_password.html # OTP token password overriding handler card
-    └── dashboard.html      # Central interactive employee communication & configuration panel
+1. Clone the repository or navigate to the directory
+2. Run `python3 app.py`
+3. Open `http://127.0.0.1:5000/` in your browser to explore the HR dashboard.
